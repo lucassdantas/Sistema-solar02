@@ -134,15 +134,57 @@
             border-radius:100%;
         }
 
-        /*PLANETAS*/
+        /*ANIMAÇÕES==============================================================*/
+        @keyframes rotate {
+            0% {
+                margin:49% 9%;
+                left:57.3%;
+                transform:rotate(0);
+            }
+            25%{
+                margin:42% 9%;
+                left:41.3%;
+            }
+            50%{
+                margin:49% 9%;
+                left:21.3%;
+            }
+            75%{
+                margin:56% 9%;
+                left:41.3%;
+            }
+            100% {
+                transform:rotate(360deg);
+                margin:49% 9%;
+                left:57.3%;
+            }
+        }
+        @keyframes translation {
+            0% {
+                margin:49% 9%;
+                left:57.3%;
+                
+            }
+            100%{
+                margin:49% 9%;
+                left:90.3%;
+            }
+
+        }
+        /*PLANETAS===============================================================*/
+
+
+        
         .planeta{
             position:absolute;
             animation-duration:5s;
             animation-iteration-count:infinite;
             animation-direction:normal;
 
-            z-index:1
+            z-index:1;
 
+          
+            
         }
         #imgmercurio{
             margin:49.5% 9%;
@@ -164,8 +206,10 @@
             left:57.3%;
    
             width:3vw;
-
-        }
+            animation: rotate 10s linear infinite;
+            animation-timing-function:cubic-bezier(1, 0, 0, 1);
+       
+        }   
 
         #imgmarte{
             margin:49% 9%;
@@ -254,7 +298,8 @@
         }
 
         /*RESPONSIVO======================*/
-
+        /*animação===================*/
+    
 
     </style>
 </head>
